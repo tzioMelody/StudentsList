@@ -1,0 +1,122 @@
+﻿<Window x:Class="StudentsList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsList"
+        mc:Ignorable="d"
+        Title="Στοιχεία μαθητή" Height="700" Width="1000">
+    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+
+  
+                <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <GroupBox BorderThickness="2" Header="Προσωπικά στοιχεία" FontWeight="Bold"  Grid.Row="0" Grid.Column="0">
+                <WrapPanel>
+                    <TextBlock Text="Όνομα" Margin="5"/>
+                    <TextBox x:Name="nameBox" HorizontalAlignment="Left" Width="100" Height="20"  Margin="5" />
+
+                    <TextBlock Text="Επίθετο"  Margin="5"/>
+                    <TextBox x:Name="lastnameBox" HorizontalAlignment="Right" Width="100" Height="20" Margin="5"/>
+
+                    <TextBlock Text="Ημερομηνία γέννησης"  Margin="5"/>
+                    <DatePicker x:Name="birthDayPicker" SelectedDateChanged="GroupFilterCombo_SelectionChanged"  Margin="5" />
+
+
+                    <Grid Margin="2">
+                        <ComboBox x:Name="genderFilterCombo" Height="25" Margin="3" SelectionChanged="genderFilterCombo_SelectionChanged" />
+                        <TextBlock Name="genderFilterPlaceHolder" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False" Text="Φύλο" />
+                    </Grid>
+
+                    <TextBlock Text="Τηλέφωνο μαθητή" Margin="5"/>
+                    <TextBox x:Name="studentsphoneBox" HorizontalAlignment="Right" Width="100" Height="20"  Margin="5"/>
+                </WrapPanel>
+            </GroupBox>
+
+            <GroupBox BorderThickness="2" Header="Στοιχεία κηδεμόνα" FontWeight="Bold" Grid.Row="1" Grid.Column="0">
+                <WrapPanel>
+
+                    <TextBlock Text="Ονοματεπώνυμο κηδεμόνα"  Grid.Row="7" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="parentsfullNameBox" HorizontalAlignment="Right" Width="100" Height="20" Grid.Row="7" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Τηλέφωνο κηδεμόνα"  Grid.Row="8" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="ParentsphoneBox" HorizontalAlignment="Right" Width="100" Height="20" Grid.Row="8" Grid.Column="1" Margin="5" />
+
+                    <TextBlock Text="Email κηδεμόνα"  Grid.Row="9" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="ParentEmailBox" HorizontalAlignment="Right" Width="100" Height="20" Grid.Row="9" Grid.Column="1" Margin="5" />
+                </WrapPanel>
+            </GroupBox>
+
+
+            <!--<Button Name="SaveButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Save_ClickBtn" Width="100" Height="20" Content="Save student" FontWeight="Bold"/>-->
+
+        </Grid>
+
+    </StackPanel>
+
+</Window>
+    
+<!--<StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0">
+        <Grid Margin="10,20,5,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+
+            </Grid.ColumnDefinitions>
+
+            
+            <TextBlock Text="Όνομα μαθητή" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Επώνυμο μαθητή" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Ημερομηνία Γέννησης" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Τηλέφωνο μαθητή" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Email" FontWeight="Bold" Grid.Row="5" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Διεύθυνση" FontWeight="Bold" Grid.Row="6" Grid.Column="0" Margin="5"/>
+
+
+            <TextBox x:Name="StudFirstName" Grid.Row="1" Grid.Column="2" Margin="5" />
+            <TextBox x:Name="StudLastName" Grid.Row="2" Grid.Column="2" Margin="5"/>
+            <TextBox x:Name="StudPhone" Grid.Row="4" Grid.Column="1" Margin="5" />
+            <TextBox x:Name="StudEmail" Grid.Row="5" Grid.Column="1" Margin="5"/>
+            <TextBox x:Name="StudAddr" Grid.Row="6" Grid.Column="4" Margin="5"/>
+            <DatePicker x:Name="birthDayPicker" Margin="5,0,5,2" SelectedDateChanged="GroupFilterCombo_SelectionChanged" Grid.Column="1" Grid.Row="3" />
+
+        </Grid>
+    </StackPanel>-->
+
+
