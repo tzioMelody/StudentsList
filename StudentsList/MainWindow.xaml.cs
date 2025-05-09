@@ -28,10 +28,6 @@ namespace StudentsList
 
         private void Save_ClickBtn(object sender, RoutedEventArgs e)
         {
-            string studentsFirstName = nameBox.Text;
-            string studentsLastName = lastnameBox.Text;
-
-            MessageBox.Show("Ο μαθητής " + studentsFirstName + " " + studentsLastName + " αποθηκεύτηκε με επιτυχία στην βάση!");
 
         }
 

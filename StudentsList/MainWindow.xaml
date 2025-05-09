@@ -46,7 +46,7 @@
 
 
                     <Grid Margin="2">
-                        <ComboBox x:Name="genderFilterCombo" Height="25" Margin="3" SelectionChanged="genderFilterCombo_SelectionChanged" />
+                        <ComboBox x:Name="genderFilterCombo" Height="25" Width="120" Margin="3" SelectionChanged="genderFilterCombo_SelectionChanged" />
                         <TextBlock Name="genderFilterPlaceHolder" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False" Text="Φύλο" />
                     </Grid>
 
